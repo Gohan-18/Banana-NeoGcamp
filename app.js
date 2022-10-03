@@ -1,4 +1,4 @@
-var button = document.querySelector(".button");
+var btnTranslate = document.querySelector(".button");
 var txtInput = document.querySelector("#input");
 var outputDiv = document.querySelector("#output");
 
@@ -10,12 +10,12 @@ function getTranslationURL(input){
 }
 
 function errorHandler(error) {
-    console.log("An error occured!!", error);
-    alert("Something went wrong with the server!! Please try again after some time...")
+    console.log("error occured", error);
+    alert("Something wrong with the server!!! Please try again after some time!!")
 }
 
 function clickHandler(){
-    var txtInput = txtInput.value; // take input 
+    var inputText = txtInput.value; // take input 
 
 
 // calling  server to process the input url
@@ -28,4 +28,4 @@ function clickHandler(){
  .catch(errorHandler)
 };
 
-button.addEventListener("click", clickHandler)
+btnTranslate.addEventListener("click", clickHandler)
